@@ -1,0 +1,26 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9; /* Light gray background */
+  color: #333; /* Dark gray text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Heading Styling */
+h1 {
+  font-size: 3rem; /* Large font size */
+  color: #0073e6; /* Blue color */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}

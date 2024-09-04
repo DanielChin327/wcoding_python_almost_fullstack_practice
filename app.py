@@ -12,8 +12,27 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-Type', 'text/html')
             self.end_headers( )
+            with open('index.html', 'rb') as file:
+                self.wfile.write(file.read())
 
-            self.wfile.write(b'<html><body><h1>About Page</h1><p>This is the about page.</p></body></html>')
+            # self.wfile.write('') # you could write html manually here, but not recommended.
+
+        elif '/styles.css':
+            self.send_response(200)
+            self.send_header('Content-Type', 'text/css')
+            self.end_headers( )
+            with open('index.html', 'rb') as file:
+                self.wfile.write(file.read())
+
+        elif path == "/about":
+            self.send_response(200)
+            self.send_header('Content-Type', 'text/html')
+            self.end_headers( )
+
+            with open('index.html', 'rb') as file:
+                self.wfile.write(file.read())
+
+
         else:
             self.send_error(404)
 
